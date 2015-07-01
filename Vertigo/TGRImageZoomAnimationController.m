@@ -87,6 +87,8 @@
                          
                          [transitionView removeFromSuperview];
                          [transitionContext.containerView addSubview:toViewController.view];
+
+                         toViewController.view.frame = [UIScreen mainScreen].bounds;
                          
                          [transitionContext completeTransition:YES];
                      }];
